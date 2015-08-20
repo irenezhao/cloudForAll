@@ -63,7 +63,11 @@ hold on;
 sf=fill(x,y,[1 1 1]);
 alpha(sf,0.3);
 hold off
-%if rectangle
-%w = s2_p-s1_p;w = w(2);
-%h = s1_p-s0_p;h = h(1);
-%rectangle('Position',[s0_p(1),s0_p(2),w,h],'edgecolor','w','facecolor','b')
+%{
+rectangle = 0;
+if rectangle
+    w = s2_p-s1_p;w = w(2);
+    h = s1_p-s0_p;h = h(1);
+    rectangle('Position',[s0_p(1),s0_p(2),w,h],'edgecolor','w','facecolor','b')
+end
+%}
